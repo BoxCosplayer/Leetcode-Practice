@@ -37,4 +37,4 @@ if __name__ == "__main__":
     k = 3
     # events = [startDay, endDay, value], k = MaxNumberofEvents
     # Must attend whole event, endDay is inclusive
-    print(maxEvents(events, k))  # expected 9 for this sample
+    print(maxValue(events, k))  # expected 9 for this sample
