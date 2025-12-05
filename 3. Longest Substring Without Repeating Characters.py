@@ -21,18 +21,11 @@ def lengthOfLongestSubstring_naive(s: str) -> int:
 
         for letterIndex in range(len(s)):
             if s[letterIndex]:
-                print("\n")
-                print("letter:                     " + s[letterIndex])
-                print("seen_letters:")
-                print(seen_letters)
-                print("have we seen letter before? " + str(s[letterIndex] in seen_letters))
                 if s[letterIndex] not in seen_letters: 
-                    print("new letter found! " + s[letterIndex])
                     seen_letters.append(s[letterIndex])
                     if len(seen_letters) > max_length:
                         max_length = len(seen_letters)
                 elif len(s) > 1:
-                    print("reset!")
                     seen_letters = []
                     s = s[1:]
                     return myFunction(seen_letters, length, max_length, s)
